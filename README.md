@@ -1,1 +1,1 @@
-# alx-low_level_programming
+-script that compiles C code
