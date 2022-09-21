@@ -1,24 +1,27 @@
 #include "main.h"
-#include <string.h>
 
 
 /**
- *DESRCP : This function appends the src string to the dest string
- *the end of dest, and then adds a terminating null byte
- *
- *Return - a pointer to the resulting string dest
+ *_strcat - a function that concatenates two strings.
+ *@dest: One of the string to be concatenated
+ *@src: The second string to be concatenated
+ *Return: Pointer to the given string
  */
 char *_strcat(char *dest, char *src);
 {
-	int i, lenDest, lenSrc;
+	char *p = dest;
 
-	lenDest = strlen(*dest);
-	lenSrc = strlen(*src);
-
-	for (i = 0; i < lenSrc; i++)
+	while (*dest != '\0')
 	{
-		*dest[lenDest + i] = *src[i];
+		dest++;
 	}
-	*dest[lenDest + i] = '\0';
-	return (dest);
+	while (*src != '\0')
+	{
+		*dest = *src;
+		dest++;
+		src++;
+	}
+
+	*dest = '\0';
+	return (p);
 }
