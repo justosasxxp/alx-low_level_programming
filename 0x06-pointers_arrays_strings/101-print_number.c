@@ -5,25 +5,34 @@
  *print_number - prints an integer using _putchar
  *
  *
- *
  *@n: integer to be printed
+ *Return: void.
  */
 void print_number(int n)
 {
-	unsigned int num;
+	unsigned int a, b, c;
 
 	if (n < 0)
 	{
-		_putchar('-');
-		num = -n;
+		_putchar(45);
+		a = n * -1;
 	}
 	else
 	{
-		num = n;
+		a = n;
 	}
 
-	if (num / 10)
-		print_number(num / 10);
+	b = a;
+	c = 1;
 
-	_putchar((num % 10) + '0');
+	while (b > 9)
+	{
+		b /= 10;
+		c *= 10;
+	}
+
+	for (; c >= 1; c /= 10)
+	{
+		_putchar(((a / c) % 10) + 48);
+	}
 }
