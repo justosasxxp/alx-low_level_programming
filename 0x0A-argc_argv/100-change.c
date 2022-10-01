@@ -8,16 +8,15 @@ int change(int cents);
 
 /**
  *
- *  * main - Entry Point
+ *main - Entry Point
  *
- *   * @argc: arguments
+ *@argc: arguments
  *
- *    * @argv: array pointing to arguments
+ *@argv: array pointing to arguments
  *
- *     * Return: 0
+ *Return: 0
  *
- *      */
-
+ */
 int main(int argc, char *argv[])
 
 {
@@ -52,13 +51,13 @@ int main(int argc, char *argv[])
 
 /**
  *
- *  * change - get change
+ *change - get change
  *
- *   * @cents: amount of coins from main function
+ *@cents: amount of coins from main function
  *
- *    * Return: change
+ *Return: change
  *
- *     */
+ */
 
 int change(int cents)
 
